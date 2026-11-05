@@ -1,0 +1,33 @@
+
+:root {
+  --pink: #f5b8d0;
+  --lavender: #c9b9f5;
+  --cream: #fff4e6;
+  --brown: #59423c;
+  --deep-purple: #49345e;
+  --soft-white: #fffaf8;
+
+  --font-main: "Trebuchet MS", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+  font-family: var(--font-main);
+  color: var(--deep-purple);
+}
+
+body {
+  overflow-x: hidden;
+  background: var(--cream);
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}

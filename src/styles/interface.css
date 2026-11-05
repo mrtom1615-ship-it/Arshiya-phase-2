@@ -1,0 +1,165 @@
+
+#loading-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  background: #fce8f0;
+  color: #59423c;
+  text-align: center;
+  transition: opacity 0.8s ease;
+}
+
+#loading-screen.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loading-panda {
+  font-size: 76px;
+  animation: panda-bounce 1.5s infinite ease-in-out;
+}
+
+.loading-track {
+  width: 180px;
+  height: 6px;
+  background: #ead5e4;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.loading-progress {
+  width: 40%;
+  height: 100%;
+  background: #d88eb5;
+  animation: loading 2s infinite ease-in-out;
+}
+
+@keyframes loading {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(250%); }
+}
+
+@keyframes panda-bounce {
+  50% { transform: translateY(-12px); }
+}
+
+.topbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 24px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.chapter {
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.welcome-card {
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  transform: translateY(-50%);
+  max-width: 470px;
+  padding: 34px;
+  border: 1px solid rgba(255,255,255,.7);
+  border-radius: 28px;
+  background: rgba(255, 247, 250, .82);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 20px 70px rgba(65, 35, 65, .13);
+}
+
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #a7658c;
+}
+
+.welcome-card h1 {
+  font-size: clamp(32px, 5vw, 53px);
+  line-height: 1.12;
+  margin: 22px 0 15px;
+}
+
+.welcome-card p {
+  line-height: 1.8;
+  color: #795d72;
+}
+
+#enter-world {
+  border: 0;
+  border-radius: 30px;
+  background: #b979a2;
+  color: white;
+  padding: 15px 23px;
+  margin-top: 18px;
+  font-weight: bold;
+  box-shadow: 0 8px 25px #b979a255;
+}
+
+#enter-world span {
+  margin-left: 12px;
+}
+
+.bottom-note {
+  margin-top: 25px;
+  font-size: 12px;
+  color: #a7658c;
+}
+
+.footer {
+  position: absolute;
+  bottom: 22px;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.world-message {
+  position: absolute;
+  left: 50%;
+  bottom: 75px;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: 90%;
+  text-align: center;
+  padding: 15px 22px;
+  background: rgba(255, 247, 250, .85);
+  border-radius: 18px;
+}
+
+@media(max-width: 650px) {
+  .topbar {
+    padding: 18px;
+  }
+
+  .chapter {
+    font-size: 8px;
+  }
+
+  .welcome-card {
+    left: 5%;
+    right: 5%;
+    max-width: none;
+    padding: 25px;
+  }
+
+  .welcome-card h1 {
+    font-size: 35px;
+  }
+}
